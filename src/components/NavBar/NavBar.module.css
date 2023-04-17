@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+
+.links h2:hover {
+    cursor: pointer;
+    transition: .4s all ease-in-out;
+    color: #FF9F1C;
+}
+
+.title {
+    display: flex;
+    gap: .5em;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+.title span {
+    font-size: 1.8em;
+    height: 1.3em;
+}
+
+.title:hover {
+    cursor: pointer;
+    transition: .4s all ease-in-out;
+    color: #FF9F1C;
+}

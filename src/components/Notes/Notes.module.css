@@ -1,0 +1,48 @@
+.container {
+    background-color: #2D3047;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1em;
+    height: 6em;
+}
+
+.spacingNote {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 2em;
+    margin-right: 2em;
+    align-items: center;
+}
+
+.spacingIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3em
+}
+
+.container:hover {
+    opacity: .9;
+    transition: 200ms all ease-in;
+}
+
+.deleteNote, .editNote {
+    font-size: 1.6em;
+}
+
+.notDoneNote {
+    display: flex;
+}
+
+:local(.doneNote) {
+    background-color: #FF9F1C;
+    color: #FF9F1C;
+    width: 1em;
+    height: 6em;
+}
