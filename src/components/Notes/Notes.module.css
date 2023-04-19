@@ -7,6 +7,7 @@
     align-items: center;
     margin-top: 1em;
     height: 6em;
+    transition: .4s all ease-in-out;
 }
 
 .spacingNote {
@@ -36,13 +37,34 @@
     font-size: 1.6em;
 }
 
-.notDoneNote {
-    display: flex;
-}
-
-:local(.doneNote) {
+.doneNoteIn {
     background-color: #FF9F1C;
     color: #FF9F1C;
-    width: 1em;
     height: 6em;
+    animation: slide-in .5s;
+    transform-origin: left;
+}
+
+.doneNoteOut {
+    background-color: #FF9F1C;
+    color: #FF9F1C;
+    height: 6em;
+    animation: slide-out .5s;
+    transform-origin: left; 
+}
+
+@keyframes slide-in {
+    from {
+        transform: scaleX(0);
+    } to {
+        transform: scaleX(100%);
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: scaleX(100%);
+    } to {
+        transform: scaleX(0);
+    }
 }
