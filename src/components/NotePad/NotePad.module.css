@@ -1,16 +1,18 @@
 .container {
-    background-color: rgba(255, 255, 255, 0.87);;
+    background-color: rgba(255, 255, 255, 0.87);
     height: 70vh;
     margin-left: 10vw;
     margin-right: 10vw;
     margin-top: 5vh;
-    border-radius: 6px 15px;
-    border: 3px #2D3047 solid;
+    border-radius: 6px 8px;
+    border: 8px #2D3047 solid;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     overflow-y: scroll;
     overflow-x: hidden;
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none; 
+    scrollbar-width: none;
+    scrollbar-color: transparent transparent;
 }
 
 .container::-webkit-scrollbar {
@@ -21,27 +23,100 @@
     display: flex;
     flex-direction: row;
     padding: 1em;
-    margin: -0.08em;
     background-color: #2D3047;
-    border-radius: 6px 6px 0px 0px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     align-items: center;
     justify-content: space-between;
 }
 
 .posicionarTextos span {
-    font-size: 2.5em;
+    font-size: 2.8em;
     height: 1.3em;
     cursor: pointer;
 }
 
 .posicionarTextos span:active {
     opacity: .7;
-    animation: mobileClick 200ms;
-} 
+    transform: scale(0.9);
+    transition: 0.1s all ease-in-out;
+}
 
-@keyframes mobileClick {
-    100% {
-        transform: scale(.9);
+.containerNote {
+    background-color: #393d5c;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1em;
+    height: 6em;
+    transition: .4s all ease-in-out;
+}
+
+.spacingNote {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 2em;
+    margin-right: 2em;
+    align-items: center;
+}
+
+.noteName {
+    transition: all 0.4s ease-in-out;
+}
+
+.spacingIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3em
+}
+
+.containerNote:hover {
+    opacity: .95;
+    transition: 200ms all ease-in;
+}
+
+.deleteNote, .editNote {
+    font-size: 1.6em;
+}
+
+.doneNoteIn {
+    background-color: #FF9F1C;
+    color: #FF9F1C;
+    height: 6em;
+    animation: slide-in .5s;
+    transform-origin: left;
+}
+
+.doneNoteOut {
+    background-color: #FF9F1C;
+    color: #FF9F1C;
+    height: 6em;
+    animation: slide-out .5s;
+    transform-origin: left; 
+}
+
+.editNote:hover, .deleteNote:hover {
+    color: #FF9F1C;
+    transition: .4s all ease-in-out;
+}
+
+@keyframes slide-in {
+    from {
+        transform: scaleX(0);
+    } to {
+        transform: scaleX(100%);
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: scaleX(100%);
+    } to {
+        transform: scaleX(0);
     }
 }

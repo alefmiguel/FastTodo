@@ -22,6 +22,7 @@
 .title {
     display: flex;
     gap: .5em;
+    font-size: 1.5em;
     justify-content: center;
     flex-direction: row;
     align-items: center;
