@@ -1,5 +1,4 @@
 import styles from "./NotePad.module.css";
-import navStyles from "../NavBar/Navbar.module.css";
 import { MdOutlineAddCircle } from "react-icons/md";
 import { RiDeleteBin2Fill } from "react-icons/ri";
 import { FaEdit } from "react-icons/fa";
@@ -13,7 +12,7 @@ function NotePad() {
   const [doneNoteList, setDoneNoteList] = useState([]);
   const [showAddTask, setShowAddTask] = useState("");
 
-  function handleAddNote() {
+  function handleAddNote(props) {
     const fundo = document.querySelector("#bg");
     const modal = document.querySelector("#modalAddTask");
 
@@ -68,7 +67,7 @@ function NotePad() {
   return (
     <section>
       <div className={styles.modalAddTask} id="modalAddTask">
-        {showAddTask && <AddTask />}
+        {showAddTask && <AddTask showAddTask={showAddTask} />}
       </div>
 
       <section id="bg">

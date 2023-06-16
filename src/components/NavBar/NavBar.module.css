@@ -39,3 +39,9 @@
     transition: .4s all ease-in-out;
     color: #FF9F1C;
 }
+
+@media (max-width: 600px) {
+    .links {
+        display: none;
+    }
+}
